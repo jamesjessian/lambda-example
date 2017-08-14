@@ -1,0 +1,15 @@
+# ------------------------------------------------------------------------
+# Environment variables
+# ------------------------------------------------------------------------
+
+dev:
+  EMAIL_POP3_HOST: "pop.gmail.com"
+  EMAIL_POP3_USERNAME: "me@gmail.com"
+  EMAIL_POP3_PASSWORD: "blahblahblahblah"
+  EMAIL_POP3_PORT: 995
+  EMAIL_POP3_TLS: true
+  EMAIL_SMTP_HOST: "smtp.gmail.com"
+  EMAIL_SMTP_USERNAME: "me@gmail.com"
+  EMAIL_SMTP_PASSWORD: "blahblahblahblah"
+  EMAIL_SMTP_PORT: 465
+  EMAIL_SMTP_TLS: true

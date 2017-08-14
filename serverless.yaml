@@ -1,0 +1,46 @@
+# Serverless definition file
+# --------------------------
+# Defines Lambda functions to be deployed to AWS using the Serverless Framework.
+# http://serverless.com
+
+service: email-services
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  region: eu-west-2
+  memorySize: 128
+  timeout: 30
+  environment: ${file(env.yml):${self:provider.stage}}
+
+functions:
+  # Get e-mails ----------------------------------------------------------------
+  getEmails:
+    handler: lambdaHandlers.getEmails
+    events:
+      - http:
+          path: emails
+          method: get
+          cors: 
+            origins:               
+              - '*'
+  # Get e-mail -----------------------------------------------------------------
+  getEmail:
+    handler: lambdaHandlers.getEmail
+    events:
+      - http:
+          path: emails/{index}
+          method: get
+          cors: 
+            origins:               
+              - '*'
+  # Send e-mail ----------------------------------------------------------------
+  sendEmail:
+    handler: lambdaHandlers.sendEmail
+    events:
+      - http:
+          path: emails
+          method: post
+          cors: 
+            origins:               
+              - '*'

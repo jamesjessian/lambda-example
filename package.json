@@ -1,0 +1,22 @@
+{
+  "name": "lambdatutorial",
+  "version": "1.0.0",
+  "description": "This was created for a tutorial about Lambda and Serverless",
+  "main": "lambdaHandlers.js",
+  "scripts": {
+    "deploy": "serverless deploy --stage dev"
+  },
+  "author": {
+    "name": "James Robinson",
+    "url": "https://github.com/bishbashbosh123/"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "serverless": "^1.19.0"
+  },
+  "dependencies": {
+    "envelope": "^1.0.7",
+    "node-pop3": "^0.1.0",
+    "nodemailer": "^4.0.1"
+  }
+}

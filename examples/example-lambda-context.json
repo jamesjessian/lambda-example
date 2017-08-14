@@ -1,0 +1,11 @@
+{
+    "callbackWaitsForEmptyEventLoop": false,
+    "logGroupName": "/aws/lambda/email-services-dev-getEmail",
+    "logStreamName": "2017/08/11/[$LATEST]6b8a520d436eacb9c5a834268b1ff393",
+    "functionName": "email-services-dev-getEmail",
+    "memoryLimitInMB": "128",
+    "functionVersion": "$LATEST",
+    "invokeid": "e10a62bc-7e7b-11e7-a284-a30626687169",
+    "awsRequestId": "e16bc20a-7e7b-11e7-84a2-a62663087169",
+    "invokedFunctionArn": "arn:aws:lambda:eu-west-2:351489114719:function:email-services-dev-getEmail"
+}

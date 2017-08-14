@@ -1,0 +1,5 @@
+{
+    "body": "{\"from\": \"me@gmail.com\",\"to\": \"you@gmail.com\",\"subject\": \"Lambda\",\"body\": \"Just saying.\"}",
+    "pathParameters": {"index": "1"},
+    "headers": {}
+}

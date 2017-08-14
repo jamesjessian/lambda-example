@@ -1,0 +1,4 @@
+.private
+.serverless
+env.yml
+node_modules

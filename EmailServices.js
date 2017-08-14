@@ -121,10 +121,20 @@ class EmailServices {
             // Get TOP for each e-mail, consecutively
             let result = Promise.resolve()
             let tops = []
-            for(let i = list.length; i > list.length-MAX_EMAILS; i--) {
+            for(let i = list.length-1; i >= list.length-MAX_EMAILS; i--) {
                 result = result
                     .then(() => this._top(i))
-                    .then((email) => tops.push(email))
+                    .then((email) => {
+                        // Make sure each e-mail returned includes the index of 
+                        // that e-mail within the list
+                        let emailWithIndex =  Object.assign(
+                            {}, 
+                            email, 
+                            { index: list[i].split(" ")[0] }
+                        )
+                        tops.push(emailWithIndex)
+                        return 
+                    })
             }
             return result
                 .then(() => this.pop3.QUIT())            

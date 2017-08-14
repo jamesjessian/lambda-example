@@ -74,7 +74,7 @@ module.exports = {
         const emailServices = createEmailServices()
 
         // Get the index parameter out of the event
-        const index = event.pathParameters.id
+        const index = event.pathParameters.index
         emailServices.getEmail(index)
         .then(email => {
             // Create a 'success' response object containing the e-mail we got
